@@ -15,5 +15,6 @@ public class RestartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().invalidate();
         resp.sendRedirect("/start");
+
     }
 }
