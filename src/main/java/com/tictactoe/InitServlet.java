@@ -24,8 +24,6 @@ public class InitServlet extends HttpServlet {
         session.setAttribute("field", field);
         session.setAttribute("data", data);
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/index.jsp");
-        requestDispatcher.forward(req, resp);
-
+        getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 }
